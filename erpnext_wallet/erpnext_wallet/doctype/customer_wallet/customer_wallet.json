@@ -1,0 +1,141 @@
+{
+ "creation": "2022-01-02 16:30:35.895885",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "info_section",
+  "wallet",
+  "column_break_4",
+  "total_amount",
+  "total_allocated",
+  "total_remaining",
+  "add_balance_section",
+  "amount",
+  "mode_of_payment",
+  "column_break_9",
+  "add_amount",
+  "section_break_11",
+  "wallet_entry"
+ ],
+ "fields": [
+  {
+   "fieldname": "info_section",
+   "fieldtype": "Section Break",
+   "label": "Info"
+  },
+  {
+   "fieldname": "wallet",
+   "fieldtype": "Link",
+   "label": "Wallet",
+   "options": "Wallet"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "wallet.total_amount",
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "wallet.total_allocated",
+   "fieldname": "total_allocated",
+   "fieldtype": "Currency",
+   "label": "Total Allocated ",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "wallet.total_remaining",
+   "fieldname": "total_remaining",
+   "fieldtype": "Currency",
+   "label": "Total Remaining ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "add_balance_section",
+   "fieldtype": "Section Break",
+   "label": "Add Balance"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "label": "Amount"
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Mode of Payment",
+   "options": "Mode of Payment"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "add_amount",
+   "fieldtype": "Button",
+   "label": "Add Amount"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Wallet Entry"
+  },
+  {
+   "fieldname": "wallet_entry",
+   "fieldtype": "Table",
+   "label": "Wallet Entry",
+   "options": "Wallet Entry"
+  }
+ ],
+ "hide_toolbar": 1,
+ "issingle": 1,
+ "modified": "2022-01-04 14:12:01.468572",
+ "modified_by": "Administrator",
+ "module": "Erpnext Wallet",
+ "name": "Customer Wallet",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Casher",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

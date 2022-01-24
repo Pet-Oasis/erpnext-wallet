@@ -1,0 +1,125 @@
+{
+ "allow_copy": 1,
+ "autoname": "field:customer_name",
+ "creation": "2021-12-12 15:01:48.357916",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_info",
+  "customer",
+  "customer_name",
+  "wallet_entry_section",
+  "wallet_entry",
+  "section_break_5",
+  "total_amount",
+  "total_allocated",
+  "total_remaining"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "label": "Customer Name",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "wallet_entry_section",
+   "fieldtype": "Section Break",
+   "label": "Wallet Entry"
+  },
+  {
+   "fieldname": "wallet_entry",
+   "fieldtype": "Table",
+   "label": "Wallet Entry",
+   "options": "Wallet Entry"
+  },
+  {
+   "fieldname": "total_remaining",
+   "fieldtype": "Currency",
+   "label": "Total Remaining ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_allocated",
+   "fieldtype": "Currency",
+   "label": "Total Allocated ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "basic_info",
+   "fieldtype": "Section Break",
+   "label": "Name",
+   "options": "fa fa-user"
+  }
+ ],
+ "icon": "fa fa-user",
+ "modified": "2022-01-09 11:04:39.645577",
+ "modified_by": "Administrator",
+ "module": "Erpnext Wallet",
+ "name": "Wallet",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Casher",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "customer_name",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "customer_name",
+ "track_changes": 1
+}
