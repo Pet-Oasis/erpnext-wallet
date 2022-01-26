@@ -7,7 +7,7 @@ frappe.ui.form.on('Customer Wallet', {
 		var d = locals[cdt][cdn];
 		if(d.amount && d.mode_of_payment){
 			return frappe.call({
-				method: "customizer.customizer.doctype.customer_wallet.customer_wallet.add_amount",
+				method: "erpnext_wallet.erpnext_wallet.doctype.customer_wallet.customer_wallet.add_amount",
 				args: {
 					data: frm.doc
 				},
